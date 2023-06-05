@@ -1,0 +1,45 @@
+body > header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: $resolution-blue;
+  color: $white;
+  padding: 0 1.5rem;
+
+  h1 {
+    align-self: center;
+    font-size: $large;
+    font-family: $cabin;
+  }
+
+  nav {
+    align-self: center;
+
+    a {
+      color:$white;
+      text-transform: uppercase;
+      font-size: $normal;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: $small;
+        color: $pink;
+      }
+    }
+
+    &.anonymous {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &.logged {
+      display: none;
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}

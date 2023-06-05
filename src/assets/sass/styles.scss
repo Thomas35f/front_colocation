@@ -1,0 +1,37 @@
+/* VARIABLES */
+
+@import "vars/colors";
+@import "vars/fonts";
+
+/* LIBRARIES */
+
+@import "libs/reset";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+/* PARTIALS */
+
+@import "partials/header";
+@import "partials/footer";
+
+/* LAYOUTS */
+@import "layouts/home";
+@import "layouts/sign-up";
+@import "layouts/login";
+@import "layouts/book";
+
+/* GENERAL */
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: $montserrat;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 10vh minmax(90vh, max-content) 15vh;
+  background-color: $white;
+  color: $rich-black;
+  width:100vw;
+}

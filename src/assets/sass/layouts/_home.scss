@@ -1,0 +1,213 @@
+#home {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 320px max-content;
+  padding-bottom: $xxlarge;
+
+  /* Home Title section */
+  & > section:first-of-type {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-rows: 30% 30% 10% 30%;
+    height:320px;
+
+    background: url("../images/old-books.png") black;
+
+    & > h2,& > h3 {
+      color :$white;
+      text-align: center;
+    }
+
+    & > h2 {
+      grid-row:  2 / 3;
+      font-family: $cabin;
+      font-size: $xxlarge;
+    }
+
+    & > h3 {
+      grid-row: 3 / 4;
+      font-size: $large;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  }
+
+  /* Home Books Section */
+  & > section:nth-of-type(2) {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 10vh minmax(calc(90vh - 320px), max-content);
+
+     h2 {
+       grid-row: 1 / 2;
+       margin-top:$large;
+       text-align: center;
+       color : $flash-pink;
+       font-weight: 700;
+       font-size: $xlarge;
+       text-transform: uppercase;
+    }
+
+    & > ul {
+      padding-top: $xlarge;
+      grid-row: 2 / 3;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: $medium;
+      row-gap: $xlarge;
+
+      li {
+        article {
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        &:nth-of-type(odd) {
+          article {
+            display: grid;
+            height : 40vh;
+            grid-template-rows: 15vh 10vh 15vh;
+            border: 1px solid rgba(1, 1, 1, 0.1);
+            border-radius: 10px;
+
+            header {
+              padding: $normal;
+              background-color: $neon-blue;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              display: grid;
+              grid-template-rows: 1.2fr 0.8fr;
+
+              h3 {
+                font-size: $large;
+                font-weight: 600;
+                color : $white;
+              }
+
+              h4 {
+                font-size: $normal;
+                color : $white;
+              }
+            }
+
+            & > p {
+              padding: $normal;
+            }
+
+            footer {
+              padding: $normal;
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+
+              & > section {
+                &:first-of-type {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+
+                  & > ul {
+                    align-self: center;
+                  }
+
+                  & > p {
+                    align-self: center;
+                  }
+                }
+
+                &:last-of-type {
+                  display: grid;
+
+                  a {
+                    align-self: center;
+                    color:$white;
+                    background-color: $neon-blue;
+                    font-weight: 500;
+                    padding:$small;
+                    text-decoration: none;
+
+                    &:hover {
+                      text-decoration: underline;
+                      text-underline-offset: 0.3rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(even) {
+          article {
+            display: grid;
+            height : 40vh;
+            grid-template-rows: 15vh 10vh 15vh;
+            border: 1px solid rgba(1, 1, 1, 0.1);
+            border-radius: 10px;
+
+            header {
+              padding: $normal;
+              background-color: $resolution-blue;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              display: grid;
+              grid-template-rows: 1.2fr 0.8fr;
+
+              h3 {
+                font-size: $large;
+                font-weight: 600;
+                color : $white;
+              }
+
+              h4 {
+                font-size: $normal;
+                color : $white;
+              }
+            }
+
+            & > p {
+              padding: $normal;
+            }
+
+            footer {
+              padding: $normal;
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+
+              & > section {
+                &:first-of-type {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+
+                  & > ul {
+                    align-self: center;
+                  }
+
+                  & > p {
+                    align-self: center;
+                  }
+                }
+
+                &:last-of-type {
+                  display: grid;
+
+                  a {
+                    align-self: center;
+                    color:$white;
+                    background-color: $resolution-blue;
+                    font-weight: 500;
+                    padding:$small;
+                    text-decoration: none;
+
+                    &:hover {
+                      text-decoration: underline;
+                      text-underline-offset: 0.3rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

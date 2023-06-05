@@ -1,0 +1,85 @@
+#login {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 320px max-content;
+  padding-bottom: $xxlarge;
+
+  /* Sign Up Title section */
+  & > section:first-of-type {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-rows: 30% 30% 10% 30%;
+    height:320px;
+
+    background: url("../images/old-books.png") black;
+
+    & > h2,& > h3 {
+      color :$white;
+      text-align: center;
+    }
+
+    & > h2 {
+      grid-row:  2 / 3;
+      font-family: $cabin;
+      font-size: $xxlarge;
+    }
+
+    & > h3 {
+      grid-row: 3 / 4;
+      font-size: $large;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  }
+
+  /* Sign Up Form Section */
+  & > section:nth-of-type(2) {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 10vh minmax(calc(90vh - 320px), max-content);
+
+    h2 {
+      grid-row: 1 / 2;
+      grid-column: 1 / 4;
+      margin-top:$large;
+      text-align: center;
+      color : $flash-pink;
+      font-weight: 700;
+      font-size: $xlarge;
+      text-transform: uppercase;
+    }
+
+    form {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+
+      fieldset {
+        display: grid;
+        padding: $normal 0;
+        grid-template-rows: 1fr 1fr;
+
+        label {
+          font-size: $small;
+          font-weight: 500;
+          color: $resolution-blue;
+
+          span {
+            color: $flash-pink;
+          }
+        }
+
+        button {
+          background-color: $neon-blue;
+          border-color: transparent;
+          border-radius: 5px;
+          color: $white;
+          font-size: $normal;
+          padding: 0.2rem 0;
+        }
+      }
+    }
+  }
+}
