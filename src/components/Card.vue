@@ -9,7 +9,7 @@
             <p class="text-center">Ceux qui doivent de l'argent à {{expense.from_user}} <span v-if="me">(dont moi)</span> :</p>
             <div class="mx-auto h-min-32" v-html="filterExpenses(expense.to_users)"></div>
             <div class="w-2/3 border-solid border-1 border-black my-6 mx-auto"></div>
-            <p class="text-center" v-if="expense.amount != payedAmount">Montant restant à définir : {{expense.amount - payedAmount}} €</p>
+            <p class="text-center" v-if="expense.amount != payedAmount">Montant restant à définir pour {{ expense.from_user}} : {{expense.amount - payedAmount}} €</p>
             <button class="bg-red-100 rounded-xl p-2 font-bold" @click="deleteExpense(expense.id)">Effacer cette dépense</button>
         </div>
     </a>
